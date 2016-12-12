@@ -56,7 +56,8 @@ class TwitterApi():
                 "id": tweet["id"],
                 "text": tweet["text"],
                 "retweet_count": tweet["retweet_count"],
-                "favorite_count": tweet["favorite_count"]})
+                "favorite_count": tweet["favorite_count"],
+                "random": random.randint(0, sys.maxsize)})
         return new_data
 
     def _clean_tweets(self, data, not_in_tweet):
